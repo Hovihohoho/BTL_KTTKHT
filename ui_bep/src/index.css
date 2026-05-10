@@ -1,0 +1,95 @@
+/* ─── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; width: 100%; }
+
+/* ─── Design Tokens ──────────────────────────────────────── */
+:root {
+  /* Brand */
+  --teal-900: #0c3530;
+  --teal-800: #185049;
+  --teal-700: #256e64;
+  --teal-600: #348c80;
+  --teal-500: #43a99b;
+  --teal-400: #65bfb3;
+  --teal-300: #93d4cb;
+  --teal-200: #bfe8e3;
+  --teal-100: #ddf4f1;
+  --teal-50:  #eefaf8;
+
+  /* Neutrals */
+  --gray-950: #0f1317;
+  --gray-900: #1a2027;
+  --gray-800: #2c3540;
+  --gray-700: #3e4d5c;
+  --gray-600: #5a6a7a;
+  --gray-500: #7a8d9e;
+  --gray-400: #9aaab8;
+  --gray-300: #bdc9d4;
+  --gray-200: #d8e1e8;
+  --gray-100: #edf1f5;
+  --gray-50:  #f6f8fa;
+
+  /* Semantic */
+  --success:      #2da771;
+  --success-bg:   #d6f5e8;
+  --danger:       #e04f5f;
+  --danger-bg:    #fde8eb;
+  --warning:      #d4870a;
+  --warning-bg:   #fef3dc;
+
+  /* Sidebar */
+  --sidebar-w:    178px;
+  --sidebar-bg:   #e2edeb;
+  --sidebar-border: #c9ddd9;
+
+  /* Surfaces */
+  --bg:           #f1f4f6;
+  --surface:      #ffffff;
+  --surface-2:    #f6f9f8;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.09), 0 2px 4px rgba(0,0,0,.05);
+  --shadow-lg: 0 10px 32px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  --shadow-xl: 0 24px 56px rgba(0,0,0,.16), 0 8px 16px rgba(0,0,0,.08);
+
+  /* Radii */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   18px;
+  --r-xl:   24px;
+  --r-full: 9999px;
+
+  /* Typography */
+  --font-body:    'Be Vietnam Pro', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:   150ms;
+  --dur-normal: 240ms;
+  --dur-slow:   400ms;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--gray-800);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+button  { font-family: var(--font-body); cursor: pointer; border: none; background: none; }
+input   { font-family: var(--font-body); }
+a       { color: inherit; text-decoration: none; }
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--teal-200); border-radius: var(--r-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--teal-300); }
